@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licytacja Dwustronna</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .extra-buttons-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        #explanation {
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            font-size: 14px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .control-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #biddingDisplay {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 400px;
+            margin: 0 auto;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .bid {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            text-align: center;
+            width: 60px;
+        }
+
+        .bid-row {
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Licytacja Dwustronna</h1>
+
+    <!-- Container for Bidding Levels (1-7) -->
+    <div id="biddingLevels" class="button-container"></div>
+
+    <!-- Container for Extra Suit Buttons (C, D, H, S, NT) -->
+    <div id="extraButtons" class="extra-buttons-container"></div>
+
+    <!-- X and XX buttons -->
+    <div id="specialButtons" class="button-container">
+        <button id="xButton">X</button>
+        <button id="xxButton">XX</button>
+        <button id="passButton">Pass</button>
+    </div>
+
+    <!-- Bidding Display (will show the bids) -->
+    <div id="biddingDisplay"></div>
+
+    <!-- Explanation Text Area -->
+    <textarea id="explanation" readonly>Wyjaśnienia pojawią się tutaj...</textarea>
+
+    <!-- Control Buttons (Cofnij, Reset) -->
+    <div class="control-buttons">
+        <button id="undoButton">Cofnij</button>
+        <button id="resetButton">Reset</button>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
